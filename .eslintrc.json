@@ -1,0 +1,33 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "naver", "plugin:react/recommended", "prettier", "prettier/react"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "parser": "babel-eslint",
+  "plugins": ["react", "import", "eslint-plugin-react-hooks"],
+  "rules": {
+    "no-console": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "babel-module": {
+        "root": ["./src"],
+        "alias": {
+          "/": "./"
+        }
+      }
+    }
+  }
+}
