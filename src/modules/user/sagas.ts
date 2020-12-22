@@ -1,8 +1,9 @@
-import { all, fork, takeEvery } from 'redux-saga/effects';
+import { takeEvery } from 'redux-saga/effects';
 import userActionTypes from './actionTypes';
 
 function* logIn() {
   try {
+    yield true;
   } catch (e) {}
 }
 

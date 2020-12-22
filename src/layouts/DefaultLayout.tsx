@@ -6,7 +6,7 @@ interface DefaultLayoutProps {
   component: any;
 }
 
-const DefaultLayout = ({ path, component: Component, ...rest }: DefaultLayoutProps) {
+const DefaultLayout = ({ path, component: Component, ...rest }: DefaultLayoutProps) => {
   const user = true;
 
   return (
@@ -19,6 +19,6 @@ const DefaultLayout = ({ path, component: Component, ...rest }: DefaultLayoutPro
       {!user && <Redirect to="/login" />}
     </>
   );
-}
+};
 
 export default DefaultLayout;

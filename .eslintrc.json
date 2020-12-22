@@ -4,7 +4,14 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "naver", "plugin:react/recommended", "prettier", "prettier/react"],
+  "extends": [
+    "eslint:recommended",
+    "naver",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react",
+    "plugin:@typescript-eslint/recommended"
+  ],
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
@@ -12,22 +19,15 @@
       "jsx": true
     }
   },
-  "parser": "babel-eslint",
-  "plugins": ["react", "import", "eslint-plugin-react-hooks"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "import", "eslint-plugin-react-hooks", "@typescript-eslint"],
   "rules": {
-    "no-console": "warn"
+    "no-console": "warn",
+    "no-use-before-define": "off"
   },
   "settings": {
     "react": {
       "version": "detect"
-    },
-    "import/resolver": {
-      "babel-module": {
-        "root": ["./src"],
-        "alias": {
-          "/": "./"
-        }
-      }
     }
   }
 }
