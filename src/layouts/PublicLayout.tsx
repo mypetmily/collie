@@ -7,7 +7,7 @@ interface PublicLayoutProps {
 }
 
 const PublicLayout = ({ path, component: Component, ...rest }: PublicLayoutProps) => {
-  const user = true;
+  const user = false;
 
   return (
     <>
