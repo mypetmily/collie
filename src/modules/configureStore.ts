@@ -12,17 +12,12 @@ const rootReducer = createRootReducer(history);
 
 export default function configureStore() {
   const sagaMiddleware = createSaga();
-  const store = createStore(
-    rootReducer,
-    compose(
-      applyMiddleware(routerMiddleware(history), sagaMiddleware),
-      process.env.NODE_ENV === 'development' && window.__REDUX_DEVTOOLS_EXTENSION__
-        ? window.__REDUX_DEVTOOLS_EXTENSION__()
-        : () => {
-            return undefined;
-          }
-    )
-  );
+  const middlewares = [routerMiddleware(history), sagaMiddleware];
+  const enhancer =
+    process.env.NODE_ENV === 'development'
+      ? compose(applyMiddleware(...middlewares), window.__REDUX_DEVTOOLS_EXTENSION__())
+      : compose(applyMiddleware(...middlewares));
+  const store = createStore(rootReducer, enhancer);
 
   sagaMiddleware.run(rootSaga);
 
