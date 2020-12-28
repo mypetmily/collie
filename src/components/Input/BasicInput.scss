@@ -1,0 +1,14 @@
+.input {
+  height: 50px;
+
+  &.round {
+    border-radius: 23px;
+  }
+}
+.label {
+  display: block;
+  margin-left: 27px;
+}
+.message {
+  margin: 5px 0 0 17px;
+}
