@@ -8,6 +8,9 @@ import PublicLayout from './layouts/PublicLayout';
 import Home from './pages/Home';
 import Login from './pages/Login';
 
+import 'antd/dist/antd.css';
+import './App.scss';
+
 const App = () => {
   return (
     <ConnectedRouter history={history}>
