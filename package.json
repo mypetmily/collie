@@ -7,7 +7,8 @@
   "author": "MyPetmily <dlatns0201@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel index.html -p 3000 --open"
+    "dev": "parcel index.html -p 3000 --open",
+    "build": "parcel build index.html --out-dir dist --public-url ./"
   },
   "husky": {
     "hooks": {
