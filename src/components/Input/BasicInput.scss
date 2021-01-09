@@ -1,6 +1,9 @@
 .basic-input {
+  margin-bottom: 30px;
+
   .basic-input__input {
     height: 50px;
+    padding: 4px 20px;
 
     &.round {
       border-radius: 23px;
@@ -12,5 +15,9 @@
   }
   .basic-input__message {
     margin: 5px 0 0 17px;
+  }
+
+  & + .basic-input {
+    margin-top: 26px;
   }
 }

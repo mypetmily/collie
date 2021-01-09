@@ -10,7 +10,7 @@ import { SubmitBtn } from '@comp/Button';
 
 import './index.scss';
 
-const LoginPage = () => {
+const LoginPage = (): JSX.Element => {
   return (
     <div className="login-page">
       <div className="login-page__inner">
@@ -22,8 +22,8 @@ const LoginPage = () => {
         </Paragraph>
         <div className="login-page__form-container">
           <Form name="user">
-            <BasicInput label="이메일" name="email" message="이메일을 입력해주세요" />
-            <BasicInput label="비밀번호" name="password" message="비밀번호를 입력해주세요" />
+            <BasicInput type="text" label="이메일" name="email" message="이메일을 입력해주세요" />
+            <BasicInput type="password" label="비밀번호" name="password" message="비밀번호를 입력해주세요" />
             <Link to="/forget_auth" className="login-page__forget-link">
               아이디 / 비밀번호를 잊어버렸어요!
             </Link>

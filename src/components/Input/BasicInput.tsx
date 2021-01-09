@@ -1,8 +1,8 @@
-import React, { CSSProperties } from 'react';
-import { Form, Input, Button } from 'antd';
+import React from 'react';
+import { Form, Input } from 'antd';
 import cx from 'classnames';
 
-import Style from './BasicInput.scss';
+import './BasicInput.scss';
 
 const InputType = {
   Text: 'text',
@@ -16,10 +16,6 @@ interface Props {
   message?: string;
   required?: boolean;
   requiredStyle?: boolean;
-  wrapperStyle?: CSSProperties;
-  inputStyle?: CSSProperties;
-  wrapperClass?: string;
-  inputClass?: string;
 }
 
 export const BasicInput = ({
@@ -29,10 +25,6 @@ export const BasicInput = ({
   message,
   required = true,
   requiredStyle = false,
-  wrapperStyle,
-  inputStyle,
-  wrapperClass,
-  inputClass,
 }: Props): JSX.Element => {
   let Component;
 
@@ -58,15 +50,11 @@ export const BasicInput = ({
       name={name}
       required={requiredStyle}
       rules={[{ required, message }]}
-      label={<span className={Style.label}>{label}</span>}
-      help={<p className={Style.message}>{message}</p>}
+      label={<span className="basic-input__label">{label}</span>}
+      help={<p className="basic-input__message">{message}</p>}
       validateStatus="error"
-      style={{ marginBottom: '30px', ...wrapperStyle }}
-      className={cx('basic-input', wrapperClass)}>
-      <Component
-        className={cx('basic-input__input', 'round', inputClass)}
-        style={{ padding: '4px 20px', ...inputStyle }}
-      />
+      className={cx('basic-input')}>
+      <Component className={cx('basic-input__input', 'round')} />
     </Form.Item>
   );
 };
