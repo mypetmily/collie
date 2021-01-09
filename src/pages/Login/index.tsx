@@ -1,15 +1,14 @@
 import React from 'react';
 
-import { Form, Input, Button } from 'antd';
+import { Form } from 'antd';
 import { Link } from 'react-router-dom';
-import cx from 'classnames';
 import Title from 'antd/lib/typography/Title';
 import Paragraph from 'antd/lib/typography/Paragraph';
-import { BasicInput } from '../../components/Input';
+
+import { BasicInput } from '@comp/Input';
+import { SubmitBtn } from '@comp/Button';
 
 import './index.scss';
-
-const formLayout = {};
 
 const LoginPage = () => {
   return (
@@ -28,7 +27,7 @@ const LoginPage = () => {
             <Link to="/forget_auth" className="login-page__forget-link">
               아이디 / 비밀번호를 잊어버렸어요!
             </Link>
-            <BasicInput type="submit" label="로그인" wrapperStyle={{ clear: 'both' }} />
+            <SubmitBtn className="login-page__submit-btn">로그인</SubmitBtn>
           </Form>
         </div>
       </div>
