@@ -1,0 +1,13 @@
+.ant-typography.page-title {
+  font-size: 30px;
+  line-height: 44px;
+  color: #000;
+  text-align: center;
+}
+
+@media (max-width: 320px) {
+  .ant-typography.page-title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
