@@ -118,6 +118,9 @@ table {
 }
 
 // 전역 스타일
+body {
+  background: #fcfdff;
+}
 :global(#root) {
   min-height: 100vh;
 }
