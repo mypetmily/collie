@@ -15,7 +15,8 @@
       {
         "root": ["./src"],
         "alias": {
-          "@": "./src"
+          "@": "./src",
+          "@st": "./src/style"
         }
       }
     ]
