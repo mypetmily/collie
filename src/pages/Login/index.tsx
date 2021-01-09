@@ -20,16 +20,16 @@ const LoginPage = (): JSX.Element => {
         <Paragraph strong={true} className="login-page__sub-tit">
           마이펫밀리의 회원이 되어보세요!
         </Paragraph>
-        <div className="login-page__form-container">
-          <Form name="user">
+        <Form name="user">
+          <div className="login-page__form-container">
             <BasicInput type="text" label="이메일" name="email" message="이메일을 입력해주세요" />
             <BasicInput type="password" label="비밀번호" name="password" message="비밀번호를 입력해주세요" />
             <Link to="/forget_auth" className="login-page__forget-link">
               아이디 / 비밀번호를 잊어버렸어요!
             </Link>
             <SubmitBtn className="login-page__submit-btn">로그인</SubmitBtn>
-          </Form>
-        </div>
+          </div>
+        </Form>
       </div>
     </div>
   );
