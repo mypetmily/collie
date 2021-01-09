@@ -1,14 +1,28 @@
-.input {
-  height: 50px;
+.basic-input {
+  .basic-input__input {
+    height: 50px;
 
-  &.round {
-    border-radius: 23px;
+    &.round {
+      border-radius: 23px;
+    }
+    &.submit {
+      display: block;
+      height: auto;
+      margin: 60px auto 0;
+      padding: 18px 131px;
+      background: #ffd153;
+      border-radius: 27px;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    }
   }
-}
-.label {
-  display: block;
-  margin-left: 27px;
-}
-.message {
-  margin: 5px 0 0 17px;
+  .basic-input__label {
+    display: block;
+    margin-left: 27px;
+  }
+  .basic-input__message {
+    margin: 5px 0 0 17px;
+  }
 }

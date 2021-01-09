@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Style from './index.scss';
+import './index.scss';
 
 const Home = () => {
-  return <div className={Style.container}>Home</div>;
+  return <div className="home-page">Home</div>;
 };
 
 export default Home;
