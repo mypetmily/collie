@@ -7,7 +7,6 @@ import Style from './BasicInput.scss';
 const InputType = {
   Text: 'text',
   Password: 'password',
-  Submit: 'submit',
 } as const;
 
 interface Props {
@@ -59,21 +58,15 @@ export const BasicInput = ({
       name={name}
       required={requiredStyle}
       rules={[{ required, message }]}
-      label={type !== InputType.Submit && <span className={Style.label}>{label}</span>}
+      label={<span className={Style.label}>{label}</span>}
       help={<p className={Style.message}>{message}</p>}
       validateStatus="error"
       style={{ marginBottom: '30px', ...wrapperStyle }}
       className={cx('basic-input', wrapperClass)}>
-      {type === InputType.Submit ? (
-        <Button htmlType="submit" className={cx('basic-input__input', 'submit', inputClass)} style={inputStyle}>
-          {label}
-        </Button>
-      ) : (
-        <Component
-          className={cx('basic-input__input', 'round', inputClass)}
-          style={{ padding: '4px 20px', ...inputStyle }}
-        />
-      )}
+      <Component
+        className={cx('basic-input__input', 'round', inputClass)}
+        style={{ padding: '4px 20px', ...inputStyle }}
+      />
     </Form.Item>
   );
 };
