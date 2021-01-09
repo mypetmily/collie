@@ -16,6 +16,7 @@ interface Props {
   message?: string;
   required?: boolean;
   requiredStyle?: boolean;
+  placeholder?: string;
 }
 
 export const BasicInput = ({
@@ -25,6 +26,7 @@ export const BasicInput = ({
   message,
   required = true,
   requiredStyle = false,
+  placeholder = '',
 }: Props): JSX.Element => {
   let Component;
 
@@ -54,7 +56,7 @@ export const BasicInput = ({
       help={<p className="basic-input__message">{message}</p>}
       validateStatus="error"
       className={cx('basic-input')}>
-      <Component className={cx('basic-input__input', 'round')} />
+      <Component className={cx('basic-input__input', 'round')} placeholder={placeholder} />
     </Form.Item>
   );
 };
